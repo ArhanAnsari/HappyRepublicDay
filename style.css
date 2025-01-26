@@ -1,0 +1,57 @@
+/* Additional Styling */
+#fireworks-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.parallax .floating {
+  position: absolute;
+  animation: float 6s ease-in-out infinite;
+}
+
+.flag {
+  width: 80px;
+  top: 10%;
+  left: 20%;
+}
+
+.cloud {
+  width: 120px;
+  top: 20%;
+  left: 70%;
+}
+
+textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+.countdown {
+  margin: 20px 0;
+}
+
+.quote {
+  font-style: italic;
+  margin-top: 15px;
+  color: #ffd700;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
