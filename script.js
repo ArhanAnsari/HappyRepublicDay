@@ -1,14 +1,4 @@
-// Fireworks Animation
-const fireworksContainer = document.getElementById("fireworks-container");
-for (let i = 0; i < 50; i++) {
-  const firework = document.createElement("div");
-  firework.classList.add("firework");
-  firework.style.left = `${Math.random() * 100}%`;
-  firework.style.animationDelay = `${Math.random() * 2}s`;
-  fireworksContainer.appendChild(firework);
-}
-
-// Background Music Toggle
+// Background Music
 const bgMusic = document.getElementById("bgMusic");
 const musicToggle = document.getElementById("musicToggle");
 musicToggle.addEventListener("click", () => {
@@ -33,25 +23,30 @@ function updateCountdown() {
   const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
   const minutes = Math.floor((diff / (1000 * 60)) % 60);
   const seconds = Math.floor((diff / 1000) % 60);
-  countdownTimer.textContent = `${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
+  countdownTimer.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 }
 setInterval(updateCountdown, 1000);
 
-// Reveal Wishes
-const wishButton = document.getElementById("wishButton");
-const surprise = document.getElementById("surprise");
-const customMessage = document.getElementById("customMessage");
-const dynamicWish = document.getElementById("dynamicWish");
-const dynamicQuote = document.getElementById("dynamicQuote");
-
+// Quotes Carousel
 const quotes = [
   "Be the change you wish to see in the world. – Mahatma Gandhi",
   "Freedom is not worth having if it does not include the freedom to make mistakes. – Gandhi",
   "A nation's culture resides in the hearts and in the soul of its people. – Gandhi",
 ];
+let quoteIndex = 0;
+const quoteElement = document.getElementById("quote");
+setInterval(() => {
+  quoteIndex = (quoteIndex + 1) % quotes.length;
+  quoteElement.textContent = quotes[quoteIndex];
+}, 3000);
+
+// Reveal Wish
+const wishButton = document.getElementById("wishButton");
+const surprise = document.getElementById("surprise");
+const customMessage = document.getElementById("customMessage");
+const dynamicWish = document.getElementById("dynamicWish");
 
 wishButton.addEventListener("click", () => {
   surprise.classList.remove("hidden");
   dynamicWish.textContent = customMessage.value || "Wishing You a Joyful Republic Day!";
-  dynamicQuote.textContent = quotes[Math.floor(Math.random() * quotes.length)];
 });
