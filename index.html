@@ -8,29 +8,52 @@
 </head>
 <body>
   <div id="fireworks-container"></div>
+
+  <!-- Background Music -->
   <audio id="bgMusic" loop>
     <source src="patriotic.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
+
+  <!-- Main Container -->
   <div class="container">
-    <div class="parallax">
-      <img src="flag.png" alt="Flag" class="floating flag">
-      <img src="cloud.png" alt="Cloud" class="floating cloud">
+    <!-- Animated Flag -->
+    <div class="flag-wrapper">
+      <div class="flag">
+        <div class="saffron"></div>
+        <div class="white">
+          <div class="ashok-chakra"></div>
+        </div>
+        <div class="green"></div>
+      </div>
     </div>
+
+    <!-- Content -->
     <h1 class="title">Happy Republic Day!</h1>
+    <p class="subtitle">Celebrate the pride of our nation with joy and unity.</p>
+
+    <!-- Countdown Timer -->
     <div class="countdown">
       <h3>Countdown to Republic Day</h3>
       <p id="countdown-timer"></p>
     </div>
-    <p class="message">Celebrate the spirit of unity, freedom, and patriotism.</p>
+
+    <!-- Quotes Carousel -->
+    <div class="quotes">
+      <p id="quote">"Be the change you wish to see in the world." – Mahatma Gandhi</p>
+    </div>
+
+    <!-- Interactive Section -->
     <textarea id="customMessage" placeholder="Write your personalized wish..."></textarea>
     <button id="wishButton" class="btn">Reveal Wishes 🎉</button>
-    <button id="musicToggle" class="btn">Toggle Music 🎵</button>
+    <button id="musicToggle" class="btn">Play Music 🎵</button>
+
+    <!-- Hidden Wish -->
     <div id="surprise" class="hidden">
       <p>🇮🇳 <span id="dynamicWish"></span> 🇮🇳</p>
-      <p class="quote" id="dynamicQuote"></p>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
