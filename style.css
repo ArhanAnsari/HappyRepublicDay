@@ -1,57 +1,139 @@
-/* Additional Styling */
-#fireworks-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.parallax .floating {
-  position: absolute;
-  animation: float 6s ease-in-out infinite;
+/* Body */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #1a1a3d, #1a5276);
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Container */
+.container {
+  max-width: 700px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Title and Subtitle */
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #f4d03f;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #ecf0f1;
+}
+
+/* Flag */
+.flag-wrapper {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .flag {
-  width: 80px;
-  top: 10%;
-  left: 20%;
+  width: 150px;
+  height: 100px;
+  animation: wave 1.5s infinite;
 }
 
-.cloud {
-  width: 120px;
-  top: 20%;
-  left: 70%;
-}
-
-textarea {
+.flag div {
   width: 100%;
-  margin: 10px 0;
-  padding: 10px;
-  font-size: 1rem;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  resize: none;
+  height: 33%;
 }
 
+.saffron {
+  background: #FF9933;
+}
+
+.white {
+  background: white;
+  position: relative;
+}
+
+.ashok-chakra {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #000080;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 2px;
+}
+
+.green {
+  background: #138808;
+}
+
+/* Buttons */
+.btn {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background: #3498db;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #2980b9;
+}
+
+/* Countdown */
 .countdown {
   margin: 20px 0;
 }
 
-.quote {
+/* Quotes */
+.quotes {
+  margin: 20px 0;
   font-style: italic;
-  margin-top: 15px;
-  color: #ffd700;
+  color: #f39c12;
 }
 
-/* Floating Animation */
-@keyframes float {
+/* Hidden Surprise */
+.hidden {
+  display: none;
+  background: rgba(255, 255, 255, 0.2);
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes wave {
   0%, 100% {
-    transform: translateY(0);
+    transform: rotate(0);
   }
   50% {
-    transform: translateY(-20px);
+    transform: rotate(10deg);
   }
 }
