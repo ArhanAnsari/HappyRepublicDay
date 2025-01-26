@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Republic Day</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="fireworks-container"></div>
+  <audio id="bgMusic" loop>
+    <source src="patriotic.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <div class="container">
+    <div class="parallax">
+      <img src="flag.png" alt="Flag" class="floating flag">
+      <img src="cloud.png" alt="Cloud" class="floating cloud">
+    </div>
+    <h1 class="title">Happy Republic Day!</h1>
+    <div class="countdown">
+      <h3>Countdown to Republic Day</h3>
+      <p id="countdown-timer"></p>
+    </div>
+    <p class="message">Celebrate the spirit of unity, freedom, and patriotism.</p>
+    <textarea id="customMessage" placeholder="Write your personalized wish..."></textarea>
+    <button id="wishButton" class="btn">Reveal Wishes 🎉</button>
+    <button id="musicToggle" class="btn">Toggle Music 🎵</button>
+    <div id="surprise" class="hidden">
+      <p>🇮🇳 <span id="dynamicWish"></span> 🇮🇳</p>
+      <p class="quote" id="dynamicQuote"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
